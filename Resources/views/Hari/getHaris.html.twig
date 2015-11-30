@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'hari.list'|trans({}, 'AisHariBundle') }}</h1>
+
+    <ul id="hari-list">
+        {% for hari in haris %}
+            <li>
+                <a href="{{ path('api_1_get_hari', {'id': hari.id}) }}">{{ hari.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_haris', {'id': hari.id}) }}">{{ 'hari.edit.link'|trans({}, 'AisHariBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_haris', {'id': hari.id}) }}">{{ 'hari.remove.link'|trans({}, 'AisHariBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'hari.list.empty'|trans({}, 'AisHariBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_hari') }}">{{ 'hari.new.link'|trans({}, 'AisHariBundle') }}</a>
+    </p>
+{% endblock %}

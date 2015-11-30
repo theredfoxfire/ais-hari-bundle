@@ -1,0 +1,17 @@
+Ais\HariBundle\Entity\Hari:
+ type: entity
+ table: hari
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  nama:
+   type: string
+   length: 100
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true
