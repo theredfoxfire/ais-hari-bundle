@@ -114,4 +114,3 @@ class Hari implements HariInterface
         return $this->is_delete;
     }
 }
-

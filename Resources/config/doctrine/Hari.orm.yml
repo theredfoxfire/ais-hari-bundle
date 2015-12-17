@@ -1,6 +1,7 @@
 Ais\HariBundle\Entity\Hari:
  type: entity
  table: hari
+ repositoryClass: Ais\HariBundle\Repository\HariRepository
  id:
   id: 
    type: integer
